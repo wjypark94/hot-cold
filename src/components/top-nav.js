@@ -2,7 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import {generateAuralUpdate, restartGame} from '../actions';
-
+import './styles/top-nav.css';
 
 export function TopNav(props) {
     return (
