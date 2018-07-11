@@ -1,7 +1,7 @@
 import React from 'react';
 
 import TopNav from './top-nav';
-
+import './styles/header.css';
 
 export default function Header(props) {
   return (
