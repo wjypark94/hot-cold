@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-
+import './styles/guess-count.css';
 
 export function GuessCount(props) {
     const isPlural = props.guessCount !== 1;

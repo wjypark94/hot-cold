@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-
+import './styles/guess-form.css';
 import { makeGuess } from '../actions';
 
 

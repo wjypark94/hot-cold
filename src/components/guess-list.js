@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-
-
+import './styles/guess-list.css';
 
 export function GuessList(props) {
   const guesses = props.guesses.map((guess, index) => (
