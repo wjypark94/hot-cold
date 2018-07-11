@@ -1,63 +1,75 @@
-import {
-    SHOW_GAME_MESSAGE,
-    HIDE_GAME_MESSAGE,
-    ANALYZE_CHOICE,
-    RESTART_GAME
-  } from "./action";
-  
-  const initialState = {
-    gameDescription: "hide",
-    userInput: 0,
-    userChoices: [],
-    choiceCounter: 0,
-    hotOrColdMessage: "Make your Guess!",
-    computerChoice: Math.floor(Math.random() * (100 - 1 + 1)) + 1
-  };
-  
-  const showResultsMessage = (userInput, state) => {
-    const guess = Math.abs(initialState.computerChoice - Number(userInput));
-  
-    if (guess >= 50) {
-      return  "You're Ice Cold...";
-    } else if (guess >= 30) {
-      return "You're Cold...";
-    } else if (guess >= 10) {
-      return  "You're Warm.";
-    } else if (guess >= 1) {
-      return "You're Hot!";
-    } else {
-      return "You Got It!";
+import {RESTART_GAME, MAKE_GUESS, GENERATE_AURAL_UPDATE} from './actions';
+
+const initialState = {
+    guesses: [],
+    feedback: 'Make your guess!',
+    auralStatus: '',
+    correctAnswer: Math.round(Math.random() * 100) + 1
+};
+
+
+export default (state = initialState, action) => {
+    if (action.type === RESTART_GAME) {
+        return Object.assign({}, state, {
+            guesses: [],
+            feedback: 'Make your guess!',
+            auralStatus: '',
+            correctAnswer: action.correctAnswer
+        });
     }
-  };
-  
-  export default function reducer(state = initialState, action) {
-    if (action.type === SHOW_GAME_MESSAGE) {
-      return Object.assign({}, state, {
-        gameDescription: "show"
-      });
-    } else if (action.type === HIDE_GAME_MESSAGE) {
-      return Object.assign({}, state, {
-        gameDescription: "hide"
-      });
-    } else if (action.type === ANALYZE_CHOICE) {
-      return Object.assign({}, state, {
-        userChoices: state.userChoices.concat(action.userInput),
-        choiceCounter: state.choiceCounter + 1,
-        hotOrColdMessage: showResultsMessage(
-          action.userInput,
-          (state = initialState)
-        )
-      });
-    } else if (action.type === RESTART_GAME) {
-      return Object.assign({}, state, {
-        gameDescription: "hide",
-        userInput: 0,
-        userChoices: [],
-        choiceCounter: 0,
-        hotOrColdMessage: "Make your Guess!",
-        computerChoice: Math.floor(Math.random() * (100 - 1 + 1)) + 1
-      });
+
+    if (action.type === MAKE_GUESS) {
+        let feedback, guess;
+
+        guess = parseInt(action.guess, 10);
+        if (isNaN(guess)) {
+            feedback = 'Please enter a valid number.';
+
+            return Object.assign({}, state, {
+                feedback,
+                guesses: [...state.guesses, guess]
+            });
+        }
+
+        const difference = Math.abs(guess - state.correctAnswer);
+
+        if (difference >= 50) {
+            feedback = "You're Ice Cold...";
+        } else if (difference >= 30) {
+            feedback = "You're Cold...";
+        } else if (difference >= 10) {
+            feedback = "You're Warm.";
+        } else if (difference >= 1) {
+            feedback = "You're Hot!";
+        } else {
+            feedback = 'You got it!';
+        }
+
+        return Object.assign({}, state, {
+            feedback,
+            guesses: [...state.guesses, guess]
+        });
     }
-  
+
+    if (action.type === GENERATE_AURAL_UPDATE) {
+        const {guesses, feedback} = state;
+
+        // If there's not exactly 1 guess, we want to
+        // pluralize the nouns in this aural update.
+        const pluralize = guesses.length !== 1;
+
+        let auralStatus = `Here's the status of the game right now: ${feedback} You've made ${guesses.length} ${pluralize
+            ? 'guesses'
+            : 'guess'}.`;
+
+        if (guesses.length > 0) {
+            auralStatus += ` ${pluralize
+                ? 'In order of most- to least-recent, they are'
+                : 'It was'}: ${guesses.reverse().join(', ')}`;
+        }
+
+        return Object.assign({}, state, {auralStatus});
+    }
+
     return state;
-  }
+};

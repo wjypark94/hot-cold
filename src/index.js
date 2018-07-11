@@ -1,14 +1,18 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import { Provider } from "react-redux";
-import { store } from "./store";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
 
-import "./index.css";
-import App from "./components/app";
+import store from './store';
+
+import './reset.css';
+import './index.css';
+
+import Game from './components/game';
+
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <Game />
   </Provider>,
-  document.getElementById("root")
+  document.getElementById('root')
 );
