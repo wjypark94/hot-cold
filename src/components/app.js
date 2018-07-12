@@ -3,16 +3,23 @@ import {connect} from 'react-redux';
 import Game from './game';
 import InfoSection from './info-section';
 import { showGameMessage, hideGameMessage } from '../actions';
+import ParticlesEffect from './Particles';
 
 export function App(props){
     if (props.gameDescription === 'hide'){
         return (
             <div>
                 <Game/>
+                <ParticlesEffect/>
             </div>
         )
     }
-        return <InfoSection/>
+        return (
+            <div>
+                <InfoSection/>
+                <ParticlesEffect/>
+             </div>
+        )
 }
 
 const mapDispatchToProps = dispatch => ({

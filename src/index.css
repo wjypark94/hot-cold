@@ -21,10 +21,14 @@ html {
   height: 100%;
   font: 110%/1 'Lato', Calibri, Arial, sans-serif;
   background-color: #394264;
+  background-image: url("https://hdqwalls.com/download/simple-gray-abstract-background-wi-1920x1080.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 body {
-  width: 40rem;
+  width: 30rem;
   height: auto;
   padding: 0;
   margin: 3rem auto;

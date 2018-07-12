@@ -7,3 +7,9 @@ i{
     color: #e952fd;
     padding-left: 3px;
 }
+
+.game-board{
+    overflow: hidden;
+    z-index: 9999;
+    position: relative;
+}

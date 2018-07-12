@@ -9,6 +9,8 @@ export function GuessList(props) {
     </li>
   ));
 
+  
+
   return (
     <ul id="guessList" className="guessBox clearfix">
       {guesses}

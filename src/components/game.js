@@ -6,7 +6,7 @@ import './styles/game.css';
 
 export default function Game(props) {
   return (
-    <div>
+    <div className="game-board">
       <Header />
       <main role="main">
         <GuessSection />
