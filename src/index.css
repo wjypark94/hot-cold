@@ -39,14 +39,7 @@ body {
   box-shadow: 25px 25px 25px 0px rgba(11,15,24,1);
 }
 
-ul, ol {
-  list-style-type: none;
-  padding-left: 0;
-}
 
-ul li {
-  display: inline;
-}
 
 a {
   text-decoration: none;

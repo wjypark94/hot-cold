@@ -4,16 +4,25 @@ import {connect} from 'react-redux';
 import {showGameMessage, hideGameMessage} from '../actions';
 
 export function InfoSection(props) {
+
+  const rules =[
+    "I pick a random secret number between 1 to 100 and keep it hidden.",
+    "You need to guess until you can find the hidden secret number.",
+    'You will get feedback on how close ("hot") or far ("cold") your guess is.',
+    'When you get the number you will see the message "You Got It".'
+  ];
+
   return (
-    <section id="what" tabIndex="-1">
-      <h2>What do I do?</h2>
-      <p>This is a Hot or Cold Number Guessing Game. The game goes like this:</p>
-      <ol>
-        <li>I pick a <strong>random secret number</strong> between 1 to 100 and keep it hidden.</li>
-        <li>You need to <strong>guess</strong> until you can find the hidden secret number.</li>
-        <li>You will <strong>get feedback</strong> on how close ("hot") or far ("cold") your guess is.</li>
-      </ol>
-      <p>If you're using a screen reader, you can use the visually hidden "Hear state of game" link in the navigation region to get a reminder of all your past guesses and how close your current guess is to being correct.</p>
+    <section id="what" tabIndex="-1" className="description">
+      <h2 className="description-header">What do I do?</h2>
+      <p className="header-text">
+        This is a Hot or Cold Number Guessing Game. The game goes like this:
+      </p>
+        <ul>
+            {rules.map(li => <li>{li}</li>)}
+        </ul>
+
+
       <button onClick={props.hideGameMessage}>Got it</button>
     </section>
   );

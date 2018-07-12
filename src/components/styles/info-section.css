@@ -23,3 +23,26 @@
   #what:target {
     animation: section-highlight 3s;
   }
+
+  .description-header{
+    color: white;
+    padding-bottom: 10px;
+    font-size: 30px;
+  }
+
+  .header-text{
+      font-size: 20px;
+      padding-bottom: 10px;
+  }
+
+  .description ul {
+    padding-top: 15px;
+    margin: 0 auto;
+    color: #d5d5d5;
+    font-size: 16px;
+    padding-bottom: 15px;
+  }
+  
+  .description li {
+    padding: 5px;
+  }
