@@ -1,15 +1,15 @@
 import React from 'react';
 import {connect} from 'react-redux';
-
 import {generateAuralUpdate, restartGame} from '../actions';
 import './styles/top-nav.css';
+import { showGameMessage, hideGameMessage } from "../actions";
 
 export function TopNav(props) {
     return (
         <nav>
             <ul className="clearfix">
                 <li>
-                    <a href="#what" className="what" aria-label="How to play">
+                    <a href="#what" onClick={props.showGameMessage} className="what" aria-label="How to play">
                         What?
                     </a>
                 </li>
@@ -18,10 +18,7 @@ export function TopNav(props) {
                         href="#feedback"
                         className="new"
                         aria-label="Start a new game"
-                        onClick={() =>
-                            props.dispatch(
-                                restartGame(Math.floor(Math.random() * 100) + 1)
-                            )}>
+                        onClick={props.restartGame}>
                         + New Game
                     </a>
                 </li>
@@ -31,7 +28,7 @@ export function TopNav(props) {
                         /* the `visuallyhidden` class hides an element 
             while leaving it available to screen reader users  */
                         className="visuallyhidden focusable status-link"
-                        onClick={() => props.dispatch(generateAuralUpdate())}>
+                        onClick={props.generateAuralUpdate}>
                         Hear state of game
                     </a>
                 </li>
@@ -40,5 +37,16 @@ export function TopNav(props) {
     );
 }
 
+const mapDispatchToProps = dispatch => ({
+    showGameMessage: () => dispatch(showGameMessage()),
+    hideGameMessage: () => dispatch(hideGameMessage()),
+    restartGame: () => dispatch(restartGame(Math.floor(Math.random() * 100) + 1)),
+    generateAuralUpdate: () => dispatch(generateAuralUpdate())
+});
 
-export default connect()(TopNav);
+const mapStateToProps = state => ({
+    gameDescription: state.gameDescription
+});
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(TopNav);

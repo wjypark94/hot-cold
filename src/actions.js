@@ -15,3 +15,13 @@ export const makeGuess = guess => ({
     type: MAKE_GUESS,
     guess
 });
+
+export const SHOW_GAME_MESSAGE = "SHOW_GAME_MESSAGE";
+export const showGameMessage = () => ({
+    type: SHOW_GAME_MESSAGE
+})
+
+export const HIDE_GAME_MESSAGE = "HIDE_GAME_MESSAGE";
+export const hideGameMessage = () => ({
+    type: HIDE_GAME_MESSAGE
+})

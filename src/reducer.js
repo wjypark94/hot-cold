@@ -1,6 +1,13 @@
-import {RESTART_GAME, MAKE_GUESS, GENERATE_AURAL_UPDATE} from './actions';
+import {
+    RESTART_GAME, 
+    MAKE_GUESS, 
+    GENERATE_AURAL_UPDATE,
+    SHOW_GAME_MESSAGE,
+    HIDE_GAME_MESSAGE,
+    } from './actions';
 
 const initialState = {
+    gameDescription: 'hide',
     guesses: [],
     feedback: 'Make your guess!',
     auralStatus: '',
@@ -9,8 +16,21 @@ const initialState = {
 
 
 export default (state = initialState, action) => {
+    if(action.type === SHOW_GAME_MESSAGE){
+        return Object.assign({}, state, {
+            gameDescription: 'show'
+        });
+    }
+
+    if (action.type === HIDE_GAME_MESSAGE){
+        return Object.assign({}, state, {
+            gameDescription: 'hide'
+        });
+    }
+
     if (action.type === RESTART_GAME) {
         return Object.assign({}, state, {
+            gameDescription: 'hide',
             guesses: [],
             feedback: 'Make your guess!',
             auralStatus: '',

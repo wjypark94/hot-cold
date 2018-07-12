@@ -7,12 +7,12 @@ import store from './store';
 import './reset.css';
 import './index.css';
 
-import Game from './components/game';
+import App from './components/app';
 
 
 ReactDOM.render(
   <Provider store={store}>
-    <Game />
+    <App />
   </Provider>,
   document.getElementById('root')
 );
