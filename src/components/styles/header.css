@@ -5,3 +5,23 @@
     color: #fff;
     font-family: 'Monserrat';
   }
+
+  @media screen and (min-width: 655px){
+    .game-header{
+    font-weight: 900;
+    font-size: 3em;
+    padding: 0.8em;
+    color: #fff;
+    font-family: 'Monserrat';
+    }
+  }
+
+  @media screen and (min-width: 0px){
+    .game-header{
+    font-weight: 900;
+    font-size: 2em;
+    padding: 0.8em;
+    color: #fff;
+    font-family: 'Monserrat';
+    }
+  }

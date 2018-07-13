@@ -53,7 +53,8 @@
 
   .info-button{
     font-family: 'Source Sans Pro';
-    width: 10em;
+    width: 8em;
+    height: auto;
   }
 
   .info-button:hover{

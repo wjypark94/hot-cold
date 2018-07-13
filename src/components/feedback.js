@@ -21,6 +21,7 @@ export function Feedback(props) {
       role="status"
       aria-live="assertive"
       aria-atomic="true"
+      className="feedback"
     >
       {props.feedback} {guessAgain}
     </h2>

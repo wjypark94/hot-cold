@@ -7,19 +7,21 @@
       background: #cc324b;
     }
   }
+
   
-  #feedback {
-      margin: 0 auto;
+  #feedback:target {
+    animation: feedback-highlight 3s;
+  }
+
+  .feedback {
+    margin: 0 auto;
     background: #B33B3B;
     padding: 1em 0.4em;
-    font-size: 1.5em;
+    font-size: 1.2em;
     font-weight: 400;
     display: block;
     line-height: 1em;
     color: #fff;
     font-family: 'Source Sans Pro';
   }
-  
-  #feedback:target {
-    animation: feedback-highlight 3s;
-  }
+
