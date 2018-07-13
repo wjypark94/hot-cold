@@ -7,7 +7,7 @@ export function GuessCount(props) {
     const guessNoun = isPlural ? 'guesses' : 'guess';
 
     return (
-        <h2 id="guessCount">
+        <h2 id="guessCount" className="guessCount">
             You've made <span id="count">{props.guessCount}</span> {guessNoun}!
         </h2>
     );

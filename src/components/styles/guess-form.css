@@ -37,3 +37,7 @@ input, button {
     padding: 0.2em;
     font-size: 2em;
   }  
+
+  .button{
+    font-family: 'Source Sans Pro';
+  }

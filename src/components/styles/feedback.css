@@ -17,9 +17,9 @@
     display: block;
     line-height: 1em;
     color: #fff;
+    font-family: 'Source Sans Pro';
   }
   
   #feedback:target {
     animation: feedback-highlight 3s;
   }
-  

@@ -46,3 +46,21 @@
   .description li {
     padding: 5px;
   }
+
+  .description{
+    font-family: 'Source Sans Pro';
+  }
+
+  .info-button{
+    font-family: 'Source Sans Pro';
+    width: 10em;
+  }
+
+  .info-button:hover{
+    background-color: #6685B2;
+  }
+
+  .info-header{
+    font-family: 'Source Sans Pro';
+    font-size: 20px;
+  }

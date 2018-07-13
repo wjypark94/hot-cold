@@ -16,14 +16,16 @@ export function InfoSection(props) {
     <section id="what" tabIndex="-1" className="description">
       <h2 className="description-header">What do I do?</h2>
       <p className="header-text">
-        This is a Hot or Cold Number Guessing Game. The game goes like this:
+       Hot or Cold Number Guessing Game
+       <br/>
+       The game goes like this:
       </p>
         <ul>
             {rules.map(li => <li>{li}</li>)}
         </ul>
 
-
-      <button onClick={props.hideGameMessage}>Got it</button>
+      <h2 className="info-header">So, are you ready?</h2>
+      <button onClick={props.hideGameMessage} className="info-button">Got it</button>
     </section>
   );
 }
