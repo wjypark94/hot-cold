@@ -4,13 +4,35 @@
     font-family: 'Source Sans Pro';
 }
 
-i{
-    color: #e952fd;
-    padding-left: 3px;
+.fa-heart{
+    color: #E48FD9;
+    padding-right: 2px;
+}
+
+.fa-coffee{
+    color: tan;
+    padding-right: 2px;
+}
+
+.fa-spotify{
+    color: lime;
+    padding-right: 2px;
 }
 
 .game-board{
     overflow: hidden;
     z-index: 9999;
     position: relative;
+}
+
+.contact-name{
+    color: white;
+}
+
+.contact-name:hover{
+    -webkit-stroke-width: 5.3px;
+    -webkit-stroke-color: #FFFFFF;
+    -webkit-fill-color: #FFFFFF;
+    text-shadow: 1px 0px 15px white;
+    text-decoration: none;
 }

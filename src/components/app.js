@@ -12,6 +12,7 @@ export function App(props){
                 <Game/>
                 <ParticlesEffect/>
             </div>
+            
         )
     }
         return (
