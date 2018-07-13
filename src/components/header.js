@@ -7,7 +7,7 @@ export default function Header(props) {
   return (
     <header>
       <TopNav />
-      <h1>HOT or COLD</h1>
+      <h1 className="game-header">HOT or COLD</h1>
     </header>
   );
 }

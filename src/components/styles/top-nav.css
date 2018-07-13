@@ -2,6 +2,7 @@ nav {
     position: relative;
     height: 10%;
     padding: 1em;
+    background-color:#60646B;
   }
   
   nav ul li {
@@ -25,4 +26,28 @@ nav {
   .status-link {
     z-index: 100;
     top: 60px;
+  }
+
+  .what{
+    font-family: 'Shadows Into Light';
+  }
+
+  .new{
+    font-family: 'Shadows Into Light';
+  }
+
+  .what:hover{
+    background-color: #60646B;
+    -webkit-stroke-width: 5.3px;
+    -webkit-stroke-color: #FFFFFF;
+    -webkit-fill-color: #FFFFFF;
+    text-shadow: 1px 0px 20px white
+  }
+
+  .new:hover{
+    background-color: #60646B;
+    -webkit-stroke-width: 5.3px;
+    -webkit-stroke-color: #FFFFFF;
+    -webkit-fill-color: #FFFFFF;
+      text-shadow: 1px 0px 15px white
   }

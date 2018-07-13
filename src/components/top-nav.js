@@ -9,7 +9,7 @@ export function TopNav(props) {
         <nav>
             <ul className="clearfix">
                 <li>
-                    <a href="#what" onClick={props.showGameMessage} className="what" aria-label="How to play">
+                    <a onClick={props.showGameMessage} className="what" aria-label="How to play">
                         What?
                     </a>
                 </li>

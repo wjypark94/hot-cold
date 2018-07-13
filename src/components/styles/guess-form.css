@@ -27,7 +27,7 @@ input, button {
   
   button.button:hover,
   button.button:focus {
-    background: #e64c65;
+    background: #3D4046;
     color: #fff;
     cursor: pointer;
   }
