@@ -25,7 +25,8 @@ html {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  padding-bottom: 750px;
+  padding-bottom: 900px;
+  padding-top: 50px;
 }
 
 body {
