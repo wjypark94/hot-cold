@@ -25,6 +25,7 @@ html {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  padding-bottom: 750px;
 }
 
 body {
@@ -133,23 +134,6 @@ h1, h2, p, a, input, button, ol, ul {
   }
 }
 
-@media screen and (min-width: 0px){
-  body {
-    width: 20rem;
-    height: auto;
-    padding: 0;
-    margin: 3rem auto;
-    text-align: center;
-    line-height: 1.25;
-    color: white;
-    background-color: #1F253D;
-    border: 2px solid #000000;
-    border-radius: 10px;
-    -webkit-box-shadow: 25px 25px 25px 0px rgba(11,15,24,1);
-    -moz-box-shadow: 25px 25px 25px 0px rgba(11,15,24,1);
-    box-shadow: 25px 25px 25px 0px rgba(11,15,24,1);
-  }
-}
 
 @media screen and (min-width: 655px){
   body {
