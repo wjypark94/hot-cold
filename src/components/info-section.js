@@ -1,7 +1,7 @@
 import React from 'react';
 import './styles/info-section.css';
 import {connect} from 'react-redux';
-import {showGameMessage, hideGameMessage} from '../actions';
+import {hideGameMessage} from '../actions';
 
 export function InfoSection(props) {
 
