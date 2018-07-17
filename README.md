@@ -2,7 +2,7 @@
   Built with React and Redux, Hot or Cold is an interactive game that allows users to attempt to guess a randomly generated number.
 
 ## Introduction
-  Hot N Cold is an interactive and simple number guessing game. The app allows users to attempt to guess a randomly generated number with cold or hot hints throughout the game. Users can use play this simple game with friends and use for any purpose such as picking a person to wash the dishes or buy groceries. Check out the game and guess the number!
+  Hot N Cold is an interactive and simple number guessing game. The app allows users to attempt to guess a randomly generated number with cold or hot hints throughout the game. Users can play this simple game with friends and use it for fun scenarios like picking a person to wash dishes or go run errands. Check out the game and guess the number!
 
 ## Live Demo
   You can find the live demo of Hot N Cold at: <br/>
